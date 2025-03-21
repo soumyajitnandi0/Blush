@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/discoveryFragment">
+
+    <fragment
+        android:id="@+id/discoveryFragment"
+        android:name="com.example.blush.ui.discovery.DiscoveryFragment"
+        android:label="Discovery"
+        tools:layout="@layout/fragment_discovery" />
+
+    <fragment
+        android:id="@+id/matchesFragment"
+        android:name="com.example.blush.ui.matches.MatchesFragment"
+        android:label="Matches"
+        tools:layout="@layout/fragment_matches" />
+
+    <fragment
+        android:id="@+id/messagesFragment"
+        android:name="com.example.blush.ui.chat.MessagesFragment"
+        android:label="Messages"
+        tools:layout="@layout/fragment_messages" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.blush.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.blush.ui.chat.ChatFragment"
+        android:label="Chat"
+        tools:layout="@layout/fragment_chat">
+        <argument
+            android:name="matchId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userDetailsFragment"
+        android:name="com.example.blush.ui.discovery.UserDetailsFragment"
+        android:label="User Details"
+        tools:layout="@layout/fragment_user_details">
+        <argument
+            android:name="userId"
+            app:argType="string" />
+    </fragment>
+</navigation>
